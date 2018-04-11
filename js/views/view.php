@@ -7,11 +7,11 @@
         <a ng-click="vm.print()" href='' target='_blank'
            class='elgg-button elgg-button-action'><?php echo elgg_echo('projects:print'); ?></a>
 
-        <!--
+
+        <!-- Confluence Integration for only project admins -->
         <div ng-if="user.project_admin">
-        -->
-            <!-- Confluence Integration for only project admins -->
-            <!---------------- Confluence Integration Modal  ------------------------------------>
+
+            <!-- Confluence Integration Modal  ------------------------------------>
             <script type="text/ng-template" id="confluenceModal.html">
                 <div class="row modal-header">
                     <div class="col-xs-11">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </script>
-            <!-------------- Confluence Integration Modal  ------------------------------------------------->
+            <!-- Confluence Integration Modal  ------------------------------------------------->
             <!--    Already added to confluence btn     -->
             <div  ng-show="vm.inConfluence">
                 <a target="_blank"   href="{{vm.confluenceUrl}}"
@@ -57,9 +57,10 @@
                     class='elgg-button elgg-button-action'>
                     <?php echo elgg_echo('projects:confluence:add'); ?></a>
             </div>
-        <!--
+
         </div>
-        -->
+        <!-- End confluence integration -->
+
 
 
 
